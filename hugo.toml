@@ -42,7 +42,7 @@ enableRobotsTXT = true
     
   [[menu.main]]
     identifier = "github"
-    url = "https://github.com"
+    url = "https://github.com/mnovo323"
     weight = 4
     
     # We use feather-icons: https://feathericons.com/

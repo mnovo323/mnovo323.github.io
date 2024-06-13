@@ -1,0 +1,2 @@
+# Who Am I?
+I am a recent graduate of Marshall University with a BS in Computer Science. I work as an Application Developer at TC Energy on a map application using React and AWS with TypeScript across the stack (and a slew of various other technologies). Although I am most experienced with web technologies, compiled languages have a special place in my heart, and Golang is my newest obsession. 

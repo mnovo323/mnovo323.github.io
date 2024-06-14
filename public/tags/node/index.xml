@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Node on Michael Novotny</title>
+    <link>http://localhost:1313/tags/node/</link>
+    <description>Recent content in Node on Michael Novotny</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Jun 2024 18:01:23 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mrandom</title>
+      <link>http://localhost:1313/posts/mrandom/</link>
+      <pubDate>Thu, 13 Jun 2024 18:01:23 -0400</pubDate>
+      <guid>http://localhost:1313/posts/mrandom/</guid>
+      <description>A Pythonic Random Module for JavaScripters and TypeScripters A while back (8 months ago apparently&amp;hellip;) I got fed up with the built-in Math.random() function in JavaScript/in the Browser. It&amp;rsquo;s not that it&amp;rsquo;s bad per se, but it&amp;rsquo;s not very flexible and pretty opaque. For example, it&amp;rsquo;s not even possible to set the seed for the random number generator. Oh and if you want an integer between 0 and n, you have to do something like Math.</description>
+    </item>
+  </channel>
+</rss>

@@ -6,14 +6,6 @@
     <description>Recent content in World on Michael Novotny</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 13 Jun 2024 13:38:26 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/world/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>First_post</title>
-      <link>http://localhost:1313/posts/first_post/</link>
-      <pubDate>Thu, 13 Jun 2024 13:38:26 -0400</pubDate>
-      <guid>http://localhost:1313/posts/first_post/</guid>
-      <description>h1 blah blah&#xA;h2 blah blah&#xA;blah blah </description>
-    </item>
   </channel>
 </rss>

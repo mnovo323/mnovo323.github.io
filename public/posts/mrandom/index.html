@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Mrandom</title>
+    <meta name="description" content="Fixing a node package I made a while back.">
+    <meta name="keywords" content='blog, gokarna, hugo, node, typescript, npm'>
+
+    <meta property="og:url" content="http://localhost:1313/posts/mrandom/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mrandom">
+    <meta property="og:description" content="Fixing a node package I made a while back.">
+    <meta property="og:image" content="http://localhost:1313/images/avatar.webp">
+    <meta property="og:image:secure_url" content="http://localhost:1313/images/avatar.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mrandom">
+    <meta name="twitter:description" content="Fixing a node package I made a while back.">
+    <meta property="twitter:domain" content="http://localhost:1313/posts/mrandom/">
+    <meta property="twitter:url" content="http://localhost:1313/posts/mrandom/">
+    <meta name="twitter:image" content="http://localhost:1313/images/avatar.webp">
+
+    
+    <link rel="canonical" href="http://localhost:1313/posts/mrandom/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.9a920d7dabdbad8363b6a0a94e29a9dfebdb7ee64cfcb193a0145e512ef2bdab.js" integrity="sha256-mpINfavbrYNjtqCpTimp3&#43;vbfuZM/LGToBReUS7yvas="></script>
+
+    
+    
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+    
+</head>
+<body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/">
+                <img src='/images/avatar.webp' alt="avatar">
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/">Michael Novotny</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/posts/"> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/tags/"> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/files/michael_novotny_resume.pdf"> Résumé </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/mnovo323"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target"></span>
+                <a>
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/posts/"> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/tags/"> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/files/michael_novotny_resume.pdf"> Résumé </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/mnovo323"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a>
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Mrandom</h1>
+        <small role="doc-subtitle">Fixing a node package I made a while back.</small>
+        <p class="post-date">June 13, 2024
+        
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="http://localhost:1313/tags/node">node</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/tags/typescript">typescript</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/tags/npm">npm</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <h1 id="a-pythonic-random-module-for-javascripters-and-typescripters">A Pythonic Random Module for JavaScripters and TypeScripters</h1>
+<p>A while back (8 months ago apparently&hellip;) I got fed up with the built-in <code>Math.random()</code> function in JavaScript/in the Browser.
+It&rsquo;s not that it&rsquo;s <em>bad</em> per se, but it&rsquo;s not very flexible and pretty opaque. For example, it&rsquo;s not even possible to set the seed for the random number generator.
+Oh, and if you want an integer between 0 and n, you have to do something like <code>Math.floor(Math.random() * n)</code>. If you want to get a random element from an array, you have to do something like <code>arr[Math.floor(Math.random() * arr.length)]</code>.
+In the year of our Lord 2024, I think we can do better.</p>
+<p>All of that got me thinking, &ldquo;Dang, I wish I had Python&rsquo;s <code>random</code> module in JavaScript.&rdquo; So, I made it. Sure, there are probably a million other modules that do this or something similar
+(or something even better), but I wanted to make my own. So I did. And it&rsquo;s called <code>mrandom</code>. It&rsquo;s on npm, you can check it out <a href="https://www.npmjs.com/package/@mnovo323/mrandom">here</a>.</p>
+<p>I really haven&rsquo;t looked at too many other libraries/modules/packages, but at a glance I actually think mine has some merit:</p>
+<ul>
+<li>Fully typed (TypeScript)</li>
+<li>1-to-1 with Python&rsquo;s <code>random</code> module (okay I still need to implement vonmisesvariate, paretovariate, weibullvariate, but cut me some slack)</li>
+<li>Seedable</li>
+<li>Uses xoshiro128+ (a pretty good PRNG that I ported myself to TypeScript from some C looking pseudocode)</li>
+</ul>
+<p>Is it cryptographically secure? No, probably not. But it&rsquo;s good enough for most use cases. I think. I hope.</p>
+<h2 id="where-i-last-left-off">Where I Last Left Off</h2>
+<p>Last I worked on this, I got the idea on the clock, got off work, started coding, and called it done at like 11:00 PM. I was pleased with myself about it, too. I wrote a couple of tests for it, built it out, published it to npm, and called it a day.</p>
+<p>Over the next few days I got pretty excited seeing that there were hundreds of people (bots, most likely) downloading my package! Then I thought, &ldquo;Oh, gosh. I don&rsquo;t think I even tried to import my package and test it in a separate project.&rdquo; So, I did that. And it didn&rsquo;t work. Whoops. The code is fine, I just messed up something with the building and publishing, methinks.</p>
+<p>I get easily distracted by other projects, so I didn&rsquo;t get back to it until now. I&rsquo;m going to fix it up, add some more tests, and maybe even add some more functionality. Let&rsquo;s see how it goes.</p>
+<h2 id="trying-to-read-old-code">Trying To Read Old Code</h2>
+<p>I cloned the <a href="https://www.github.com/mnovo323/mrandom">repo</a>, ran the tests, and I&rsquo;ve got 5/68 failing. Honestly, I&rsquo;m not convinced it&rsquo;s the code, I could have written bad tests. <img src="/images/mrandom/mrandom_failed_tests.png" alt="Image showing 3 failed tests" title="Failing Tests"> Not great, but before I fix that, I want to see if I can even get the package to work in a separate project. I&rsquo;m going to start by creating a new project and importing <code>mrandom</code> into it. Let&rsquo;s see how it goes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>❯ npm install @mnovo323/mrandom
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>added <span style="color:#ae81ff">1</span> package, and audited <span style="color:#ae81ff">2</span> packages in 2s
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>found <span style="color:#ae81ff">0</span> vulnerabilities
+</span></span></code></pre></div><p>Noice. Let&rsquo;s take a look in the package to see what got distributed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>❯ ls
+</span></span><span style="display:flex;"><span>dist  jest.config.js  package.json  README.md  src  tests  tsconfig.json
+</span></span></code></pre></div><p>Ah, yes. Only the essentials. The README, source, tests, and dist. Brilliantly done, definitely didn&rsquo;t only need the dist directory.</p>
+<p>Well, In any case, let&rsquo;s try to import it and use it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">randint</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@mnovo323/mrandom&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">randint</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">n</span>);
+</span></span></code></pre></div><p>After compiling it with tsc and trying to run it, we get:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>❯ node dist/index.js
+</span></span><span style="display:flex;"><span>node:internal/modules/cjs/loader:1186
+</span></span><span style="display:flex;"><span>  const err <span style="color:#f92672">=</span> new Error<span style="color:#f92672">(</span>message<span style="color:#f92672">)</span>;
+</span></span><span style="display:flex;"><span>              ^
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Error: Cannot find module <span style="color:#e6db74">&#39;../src/randint&#39;</span>
+</span></span><span style="display:flex;"><span>Require stack:
+</span></span><span style="display:flex;"><span>- /home/michaelnovotny/Documents/test_npm/node_modules/@mnovo323/mrandom/dist/choice.js
+</span></span><span style="display:flex;"><span>- /home/michaelnovotny/Documents/test_npm/node_modules/@mnovo323/mrandom/dist/index.js
+</span></span><span style="display:flex;"><span>    at Module._resolveFilename <span style="color:#f92672">(</span>node:internal/modules/cjs/loader:1186:15<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Module._load <span style="color:#f92672">(</span>node:internal/modules/cjs/loader:1012:27<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Module.require <span style="color:#f92672">(</span>node:internal/modules/cjs/loader:1271:19<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at require <span style="color:#f92672">(</span>node:internal/modules/helpers:123:16<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Object.&lt;anonymous&gt; <span style="color:#f92672">(</span>/home/michaelnovotny/Documents/test_npm/node_modules/@mnovo323/mrandom/dist/choice.js:4:19<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Module._compile <span style="color:#f92672">(</span>node:internal/modules/cjs/loader:1434:14<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Module._extensions..js <span style="color:#f92672">(</span>node:internal/modules/cjs/loader:1518:10<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Module.load <span style="color:#f92672">(</span>node:internal/modules/cjs/loader:1249:32<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Module._load <span style="color:#f92672">(</span>node:internal/modules/cjs/loader:1065:12<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Module.require <span style="color:#f92672">(</span>node:internal/modules/cjs/loader:1271:19<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  code: <span style="color:#e6db74">&#39;MODULE_NOT_FOUND&#39;</span>,
+</span></span><span style="display:flex;"><span>  requireStack: <span style="color:#f92672">[</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;/home/michaelnovotny/Documents/test_npm/node_modules/@mnovo323/mrandom/dist/choice.js&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;/home/michaelnovotny/Documents/test_npm/node_modules/@mnovo323/mrandom/dist/index.js&#39;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Node.js v22.2.0
+</span></span></code></pre></div><p>Yikes.</p>
+<p>Before tackling that, I checked my failing test suite, and lo and behold I wrote a bug in my code. Quick fix, but thanks testing!</p>
+<p>After a lot of back and forth with GPT-4o, reading numerous blogs, and trial and error, I finally found out what my main problem is: I don&rsquo;t know how node <em>really</em> works. It is embarrassing. I use node packages all the time
+and I look through them from time to time to see how they were implemented, but I guess you can only learn my doing. Which brings me to&hellip;</p>
+<h2 id="a-million-ways-to-skin-a-cat">A Million Ways To Skin A Cat</h2>
+<p>There&rsquo;s too many tools and too many ways to do things in the JavaScript ecosystem. I&rsquo;m not even talking about the frameworks and libraries, I&rsquo;m talking about the build tools, the testing tools, the linting tools, the formatting tools, the CI/CD tools, the package managers, the bundlers, the transpiler, the&hellip; You get the point.</p>
+<p>Laugh at me if you want, but if I&rsquo;m being honest, I&rsquo;ve never made a node project from scratch. It&rsquo;s always <code>create-X-app</code> which gives me some boiler plate to ruin. I&rsquo;ve never even
+had to understand the difference between CommonJS and ES Modules (aside from sometimes you have to use <code>import</code> and sometimes you have to use <code>require</code>). When I started tinkering with my tsconfig, I got very confused by the sheer amount of options for &lsquo;module&rsquo; (I went with ESNext, by the way).
+There&rsquo;s too many ways to do things to do things. I&rsquo;m not even sure what best practices are for this sort of thing. My requirements are something like:</p>
+<ul>
+<li>Fully typed, with the ability to use the package in both JavaScript and TypeScript</li>
+<li>Import like <code>import { randint, choice } from '@mnovo323/mrandom'</code></li>
+<li>Import like <code>import { randint } from '@mnovo323/mrandom/randint'</code></li>
+<li>Import like <code>import random from '@mnovo323/mrandom'</code>
+<ul>
+<li>then use like <code>random.randint(1, 10)</code></li>
+</ul>
+</li>
+<li>Import like <code>const random = require('@mnovo323/mrandom')</code></li>
+<li>Import like <code>const randint = require('@mnovo323/mrandom/randint')</code></li>
+</ul>
+<p>The specific imports are important for tree shaking, I don&rsquo;t want to force a dev to import the entire module if they only need one function.</p>
+<p>After googling a whole lot and hitting my head against a brick wall, currently I have a <code>dist</code> directory with the following structure:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dist
+</span></span><span style="display:flex;"><span>├── index.d.mts
+</span></span><span style="display:flex;"><span>├── index.d.ts
+</span></span><span style="display:flex;"><span>├── index.js
+</span></span><span style="display:flex;"><span>└── index.mjs
+</span></span></code></pre></div><p>And my source directory has the following structure:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>src
+</span></span><span style="display:flex;"><span>├── betavariate.ts
+</span></span><span style="display:flex;"><span>├── binomialvariate.ts
+</span></span><span style="display:flex;"><span>├── choices.ts
+</span></span><span style="display:flex;"><span>├── choice.ts
+</span></span><span style="display:flex;"><span>├── expovariate.ts
+</span></span><span style="display:flex;"><span>├── gammavariate.ts
+</span></span><span style="display:flex;"><span>├── gauss.ts
+</span></span><span style="display:flex;"><span>├── getrandbits.ts
+</span></span><span style="display:flex;"><span>├── index.ts
+</span></span><span style="display:flex;"><span>├── lognormvariate.ts
+</span></span><span style="display:flex;"><span>├── randbytes.ts
+</span></span><span style="display:flex;"><span>├── randint.ts
+</span></span><span style="display:flex;"><span>├── randrange.ts
+</span></span><span style="display:flex;"><span>├── sample.ts
+</span></span><span style="display:flex;"><span>├── shuffle.ts
+</span></span><span style="display:flex;"><span>├── triangular.ts
+</span></span><span style="display:flex;"><span>├── uniform.ts
+</span></span><span style="display:flex;"><span>└── xoshiro128plus.ts
+</span></span></code></pre></div><p>I didn&rsquo;t like that there was a single index, and also there is no need for a .d.mts and a .d.ts. After some work I got it to look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dist
+</span></span><span style="display:flex;"><span>├── betavariate.js
+</span></span><span style="display:flex;"><span>├── betavariate.mjs
+</span></span><span style="display:flex;"><span>├── binomialvariate.js
+</span></span><span style="display:flex;"><span>├── binomialvariate.mjs
+</span></span><span style="display:flex;"><span>├── choice.js
+</span></span><span style="display:flex;"><span>├── choice.mjs
+</span></span><span style="display:flex;"><span>├── choices.js
+</span></span><span style="display:flex;"><span>├── choices.mjs
+</span></span><span style="display:flex;"><span>├── expovariate.js
+</span></span><span style="display:flex;"><span>├── expovariate.mjs
+</span></span><span style="display:flex;"><span>├── gammavariate.js
+</span></span><span style="display:flex;"><span>├── gammavariate.mjs
+</span></span><span style="display:flex;"><span>├── gauss.js
+</span></span><span style="display:flex;"><span>├── gauss.mjs
+</span></span><span style="display:flex;"><span>├── getrandbits.js
+</span></span><span style="display:flex;"><span>├── getrandbits.mjs
+</span></span><span style="display:flex;"><span>├── index.js
+</span></span><span style="display:flex;"><span>├── index.mjs
+</span></span><span style="display:flex;"><span>├── lognormvariate.js
+</span></span><span style="display:flex;"><span>├── lognormvariate.mjs
+</span></span><span style="display:flex;"><span>├── randbytes.js
+</span></span><span style="display:flex;"><span>├── randbytes.mjs
+</span></span><span style="display:flex;"><span>├── randint.js
+</span></span><span style="display:flex;"><span>├── randint.mjs
+</span></span><span style="display:flex;"><span>├── randrange.js
+</span></span><span style="display:flex;"><span>├── randrange.mjs
+</span></span><span style="display:flex;"><span>├── sample.js
+</span></span><span style="display:flex;"><span>├── sample.mjs
+</span></span><span style="display:flex;"><span>├── shuffle.js
+</span></span><span style="display:flex;"><span>├── shuffle.mjs
+</span></span><span style="display:flex;"><span>├── triangular.js
+</span></span><span style="display:flex;"><span>├── triangular.mjs
+</span></span><span style="display:flex;"><span>├── types
+</span></span><span style="display:flex;"><span>│   ├── betavariate.d.ts
+</span></span><span style="display:flex;"><span>│   ├── binomialvariate.d.ts
+</span></span><span style="display:flex;"><span>│   ├── choice.d.ts
+</span></span><span style="display:flex;"><span>│   ├── choices.d.ts
+</span></span><span style="display:flex;"><span>│   ├── expovariate.d.ts
+</span></span><span style="display:flex;"><span>│   ├── gammavariate.d.ts
+</span></span><span style="display:flex;"><span>│   ├── gauss.d.ts
+</span></span><span style="display:flex;"><span>│   ├── getrandbits.d.ts
+</span></span><span style="display:flex;"><span>│   ├── index.d.ts
+</span></span><span style="display:flex;"><span>│   ├── lognormvariate.d.ts
+</span></span><span style="display:flex;"><span>│   ├── randbytes.d.ts
+</span></span><span style="display:flex;"><span>│   ├── randint.d.ts
+</span></span><span style="display:flex;"><span>│   ├── randrange.d.ts
+</span></span><span style="display:flex;"><span>│   ├── sample.d.ts
+</span></span><span style="display:flex;"><span>│   ├── shuffle.d.ts
+</span></span><span style="display:flex;"><span>│   ├── triangular.d.ts
+</span></span><span style="display:flex;"><span>│   ├── uniform.d.ts
+</span></span><span style="display:flex;"><span>│   └── xoshiro128plus.d.ts
+</span></span><span style="display:flex;"><span>├── uniform.js
+</span></span><span style="display:flex;"><span>├── uniform.mjs
+</span></span><span style="display:flex;"><span>├── xoshiro128plus.js
+</span></span><span style="display:flex;"><span>└── xoshiro128plus.mjs
+</span></span></code></pre></div><p>I used tsup to create .mjs and .js files for everything including the index, I had my tsconfig only output types to a ./dist/types directory, and I had my package.json point to the index and also every import individually. You can see my configs and dist structure <a href="https://www.github.com/mnovo323/mrandom">here</a>.</p>
+<h2 id="concluding-thoughts">Concluding Thoughts</h2>
+<p>Working in JavaScript/TypeScript land can be a nightmare, but I learned a lot through this experience about how the whole ecosystem works right now, and in the process put out a pretty cool package.</p>
+<p>I&rsquo;m more than positive I have a lot more to learn in this space, and I would really like to have a more experienced dev look through my project and give me some pointers. I&rsquo;m sure there are a million things I could do better.</p>
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+    <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="topFunction()" title="Go to top">
+        
+        <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+    </svg>
+    <script>
+        let backToTopButton = document.getElementById("btt-button");
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            smoothScrollToTop();
+        }
+
+        function smoothScrollToTop() {
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, c - c / 8);
+                }
+            };
+            scrollToTop();
+        }
+    </script>
+    
+    
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#a-pythonic-random-module-for-javascripters-and-typescripters">A Pythonic Random Module for JavaScripters and TypeScripters</a>
+      <ul>
+        <li><a href="#where-i-last-left-off">Where I Last Left Off</a></li>
+        <li><a href="#trying-to-read-old-code">Trying To Read Old Code</a></li>
+        <li><a href="#a-million-ways-to-skin-a-cat">A Million Ways To Skin A Cat</a></li>
+        <li><a href="#concluding-thoughts">Concluding Thoughts</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 Michael Novotny</span>
+    
+    
+</footer>
+</body>
+</html>

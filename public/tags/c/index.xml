@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C on Michael Novotny</title>
+    <link>http://localhost:1313/tags/c/</link>
+    <description>Recent content in C on Michael Novotny</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 14 Jun 2024 11:54:45 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Femtochess</title>
+      <link>http://localhost:1313/posts/femtochess/</link>
+      <pubDate>Fri, 14 Jun 2024 11:54:45 -0400</pubDate>
+      <guid>http://localhost:1313/posts/femtochess/</guid>
+      <description>Femtochess &amp;ndash; My Attempt at Tiny Chess Engines I&amp;rsquo;ve been intrigued by chess programming for as long as I&amp;rsquo;ve been programming. I&amp;rsquo;ve started more chess engine projects than I&amp;rsquo;d care to admit, but I have yet to make a chess engine that actually works and plays by all the rules (castling, en passant, etc.).&#xA;Through all of my attempts, I have read a great deal about chess programming and watched a good amount of youtube videos.</description>
+    </item>
+  </channel>
+</rss>

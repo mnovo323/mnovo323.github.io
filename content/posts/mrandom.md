@@ -6,9 +6,9 @@ draft = false
 description = 'Fixing a node package I made a while back.'
 type = "post"
 showTableOfContents = true
-tags = ["node", "typescript", "npm"]
+tags = ["node", "typescript", "npm", "tech"]
 +++
-# A Pythonic Random Module for JavaScripters and TypeScripters
+## A Pythonic Random Module for JavaScripters and TypeScripters
 A while back (8 months ago apparently...) I got fed up with the built-in `Math.random()` function in JavaScript/in the Browser. 
 It's not that it's *bad* per se, but it's not very flexible and pretty opaque. For example, it's not even possible to set the seed for the random number generator.
 Oh, and if you want an integer between 0 and n, you have to do something like `Math.floor(Math.random() * n)`. If you want to get a random element from an array, you have to do something like `arr[Math.floor(Math.random() * arr.length)]`. 

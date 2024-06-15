@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Femtochess</title>
+    <meta name="description" content="Attempting to make a chess engine in 300 lines of C or less.">
+    <meta name="keywords" content='blog, gokarna, hugo, chess, C, tech'>
+
+    <meta property="og:url" content="http://localhost:1313/posts/femtochess/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Femtochess">
+    <meta property="og:description" content="Attempting to make a chess engine in 300 lines of C or less.">
+    <meta property="og:image" content="http://localhost:1313/images/avatar.webp">
+    <meta property="og:image:secure_url" content="http://localhost:1313/images/avatar.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Femtochess">
+    <meta name="twitter:description" content="Attempting to make a chess engine in 300 lines of C or less.">
+    <meta property="twitter:domain" content="http://localhost:1313/posts/femtochess/">
+    <meta property="twitter:url" content="http://localhost:1313/posts/femtochess/">
+    <meta name="twitter:image" content="http://localhost:1313/images/avatar.webp">
+
+    
+    <link rel="canonical" href="http://localhost:1313/posts/femtochess/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.9a920d7dabdbad8363b6a0a94e29a9dfebdb7ee64cfcb193a0145e512ef2bdab.js" integrity="sha256-mpINfavbrYNjtqCpTimp3&#43;vbfuZM/LGToBReUS7yvas="></script>
+
+    
+    
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+    
+</head>
+<body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/">
+                <img src='/images/avatar.webp' alt="avatar">
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/">Michael Novotny</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/posts/"> Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/tags/"> Tags </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/files/michael_novotny_resume.pdf"> Résumé </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/mnovo323"><span data-feather='github'></span>  </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target"></span>
+                <a>
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a>
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/posts/"> Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/tags/"> Tags </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/files/michael_novotny_resume.pdf"> Résumé </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/mnovo323"><span data-feather='github'></span>  </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a>
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Femtochess</h1>
+        <small role="doc-subtitle">Attempting to make a chess engine in 300 lines of C or less.</small>
+        <p class="post-date">June 14, 2024
+        
+        </p>
+
+        <ul class="post-tags">
+        
+            <li class="post-tag"><a href="http://localhost:1313/tags/chess">chess</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/tags/c">C</a></li>
+        
+            <li class="post-tag"><a href="http://localhost:1313/tags/tech">tech</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <h2 id="femtochess----my-attempt-at-tiny-chess-engines">Femtochess &ndash; My Attempt at Tiny Chess Engines</h2>
+<p>I&rsquo;ve been intrigued by chess programming for as long as I&rsquo;ve been programming. I&rsquo;ve started more chess engine projects than I&rsquo;d care to admit, but I have yet to
+make a chess engine that actually works and plays by all the rules (castling, en passant, etc.).</p>
+<p>Through all of my attempts, I have read a great deal about chess programming and watched a good amount of youtube videos. I have a really good idea of how to make
+a chess engine run, I just haven&rsquo;t had the motivation to finish one in its entirety. That changes now. I figure if I blog along as I develop a chess engine, I have
+a good chance of actually completing it in a reasonable time frame.</p>
+<p>I&rsquo;m going to call it Femtochess after a chess engine that I keep coming back to: <a href="https://nanochess.org/chess3.html">Nanochess by Oscar Toledo G.</a>. I know there
+are tricks to the demoscene and keeping your source code tiny, but I can&rsquo;t fathom how you can have a fully working chess engine in only 1257 (nonblank) characters.
+Someone also ported it to JavaScript and made a neat program with cool graphics called The Kilobyte&rsquo;s Gambit you can play against in browser
+<a href="https://vole.wtf/kilobytes-gambit/">here</a>.</p>
+<p>To make this more interesting for myself, I am giving myself the restriction of keeping the source code under 300 lines. This seems like a tough but achievable
+goal for myself, and will force me to do only what is essential while making creative choices along the way. I might get the opportunity to abuse macros too!
+Before I get started, I ought to explain my current view on how a chess engine works, more or less.</p>
+<h2 id="chess-engines">Chess Engines</h2>
+<p>The way I see chess engines, there are three parts: the board representation, the move generator, and the evaluation/search.</p>
+<p>The board representation is just the data structure/s you use to store the current state of the chess board and game. This isn&rsquo;t just where the pieces are, but
+also whose turn it is, if there are any squares available for en passant capture, you could even store information about which pieces are pinned in the board
+representation.</p>
+<p>The move generator takes a current board state and spits out all the possible moves that could be made. This is where storing the extra information like which
+pieces are pinned comes in handy, as you can skip generating those moves all together rather than generate the move then check if it&rsquo;s legal or not.</p>
+<p>The evaluation assigns a score to a certain board state. You could imagine you can create a tree of board states, go to a certain depth, and evaluate all of the board states along the way and just traverse down the path that maximizes your score and minimizes your opponents. That is the heart of a chess engine. You can
+also imagine how many leaf nodes that tree has even after a couple of levels, which is why chess engines are tricky to program.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>To get started, I&rsquo;m going to make a new directory and set up a hello world with a makefile.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-makefile" data-lang="makefile"><span style="display:flex;"><span><span style="color:#75715e"># Makefile
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>CC <span style="color:#f92672">=</span> gcc
+</span></span><span style="display:flex;"><span>CFLAGS <span style="color:#f92672">=</span> -Wall -Wextra -O2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TARGET <span style="color:#f92672">=</span> femtochess
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SRCS <span style="color:#f92672">=</span> femtochess.c
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">all</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">$(</span>TARGET<span style="color:#66d9ef">)</span> count
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$(TARGET)</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	rm -f <span style="color:#66d9ef">$(</span>TARGET<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">$(</span>CC<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$(</span>CFLAGS<span style="color:#66d9ef">)</span> -o <span style="color:#66d9ef">$(</span>TARGET<span style="color:#66d9ef">)</span> <span style="color:#66d9ef">$(</span>SRCS<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">clean</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	rm -f <span style="color:#66d9ef">$(</span>TARGET<span style="color:#66d9ef">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">count</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>	@LINES<span style="color:#f92672">=</span>$$<span style="color:#f92672">(</span>grep -v <span style="color:#e6db74">&#39;^\s*$$&#39;</span> <span style="color:#66d9ef">$(</span>SRCS<span style="color:#66d9ef">)</span> | grep -v <span style="color:#e6db74">&#39;^\s*//&#39;</span> | grep -v <span style="color:#e6db74">&#39;^\s*/\*&#39;</span> | grep -v <span style="color:#e6db74">&#39;^\s*\*&#39;</span> | wc -l<span style="color:#f92672">)</span>; <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>	echo <span style="color:#e6db74">&#34;</span>$$<span style="color:#e6db74">LINES lines counted in </span><span style="color:#66d9ef">$(</span>SRCS<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">.PHONY</span><span style="color:#f92672">:</span> all clean
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// femtochess.c
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;stdio.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Hello, world!</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>The <code>count</code> target in the makefile is a little helper I put together to, well, count the number of lines of code (excluding whitespace and comments). So when
+I make the project, I get this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>❯ make
+</span></span><span style="display:flex;"><span>rm -f femtochess
+</span></span><span style="display:flex;"><span>gcc -Wall -Wextra -O2 -o femtochess femtochess.c
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span> lines counted in femtochess.c
+</span></span><span style="display:flex;"><span>❯ ./femtochess
+</span></span><span style="display:flex;"><span>Hello, world!
+</span></span></code></pre></div><p>I think that&rsquo;s basically all that I need in the way of a build pipeline/dev environment. Now it&rsquo;s time to think about what the most compact yet simple to work
+with board representation is.</p>
+<h3 id="board-representation">Board Representation</h3>
+<p>There are a couple of different ways to represent the board. The strongest chess engines use bitboards, which is using a 64 bit number where each bit represents
+a square on the board. One of the numbers could represent everywhere on the board there is a white pawn, or everywhere on the board that you can attack with en
+passant, for example. That is going to be outside the scope of this engine, and instead we will use the most basic and intuitive representation of a board, a
+simple array. I am going to use an array that is 120 long. The reason that it isn&rsquo;t 64 long is to give the board borders that allow you to easily see if a piece
+move is valid or not:</p>
+<pre tabindex="0"><code>xxxxxxxxxx
+xxxxxxxxxx
+xrbnqknbrx
+xppppppppx
+x........x
+x........x
+x........x
+x........x
+xPPPPPPPPx
+xRBNQKNBRx
+xxxxxxxxxx
+xxxxxxxxxx
+</code></pre><p>If you can imagine moving a knight looks something like adding or subtracting from it&rsquo;s index, we can see if that actually moves it off the board onto an &lsquo;x&rsquo;.
+Without the borders, it would just look like a valid knight move where the night jumps from the a file to the h file for instance!</p>
+<p>Now to get started on some actual code, I think we can implement the board representation fairly quick:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C" data-lang="C"><span style="display:flex;"><span><span style="color:#75715e">/* -=-=-=-=-=-=-=-=-=-=-=-=-= BOARD REPRESENTATION -=-=-=-=-=-=-=-=-=-=-=-=-= */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* The basis of this board representation is a 10x12 mailbox.                 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* I am using uint_fast8_t in an attempt to make this more optimized.         */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- PIECE MAP -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 7 = off the board                                                          */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 0 = empty square                                                           */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*                                                                            */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 1  = black pawn                                                            */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 3  = black knight                                                          */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 4  = black bishop                                                          */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 5  = black rook                                                            */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 6  = black queen                                                           */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 2  = black king                                                            */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/*                                                                            */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 9  = white pawn                                                            */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 11 = white knight (m&#39;lady)                                                 */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 12 = white bishop                                                          */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 13 = white rook                                                            */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 14 = white queen                                                           */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* 10 = white king                                                            */</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">uint_fast8_t</span> board[<span style="color:#ae81ff">120</span>] <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">5</span>,  <span style="color:#ae81ff">3</span>,  <span style="color:#ae81ff">4</span>,  <span style="color:#ae81ff">6</span>,  <span style="color:#ae81ff">2</span>,  <span style="color:#ae81ff">4</span>,  <span style="color:#ae81ff">3</span>,  <span style="color:#ae81ff">5</span>,  <span style="color:#ae81ff">7</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">1</span>,  <span style="color:#ae81ff">7</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">7</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">7</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">7</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">0</span>,  <span style="color:#ae81ff">7</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">9</span>,  <span style="color:#ae81ff">9</span>,  <span style="color:#ae81ff">9</span>,  <span style="color:#ae81ff">9</span>,  <span style="color:#ae81ff">9</span>,  <span style="color:#ae81ff">9</span>,  <span style="color:#ae81ff">9</span>,  <span style="color:#ae81ff">9</span>,  <span style="color:#ae81ff">7</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">13</span>,  <span style="color:#ae81ff">7</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>,  <span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>And a quick peak under the hood:
+<img src="/images/femtochess/gdb_board_array.png" alt="GDB Board Representation Array" title="An image of gdb output in the terminal showing the board array in memory">
+Our entire board representation done and we&rsquo;re only up to 21 lines of code!</p>
+<h3 id="move-generation-evaluation-and-search">Move Generation, Evaluation, and Search</h3>
+<p>Now comes the actual heart of the chess engine. We need to implement minimax with alpha-beta pruning.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://www.chessprogramming.org/">Chess Programming Wiki</a></li>
+</ul>
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+    <svg id="btt-button" class="arrow-logo" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" onclick="topFunction()" title="Go to top">
+        
+        <path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/>
+    </svg>
+    <script>
+        let backToTopButton = document.getElementById("btt-button");
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            smoothScrollToTop();
+        }
+
+        function smoothScrollToTop() {
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                    window.requestAnimationFrame(scrollToTop);
+                    window.scrollTo(0, c - c / 8);
+                }
+            };
+            scrollToTop();
+        }
+    </script>
+    
+    
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#femtochess----my-attempt-at-tiny-chess-engines">Femtochess &ndash; My Attempt at Tiny Chess Engines</a></li>
+        <li><a href="#chess-engines">Chess Engines</a></li>
+        <li><a href="#getting-started">Getting Started</a>
+          <ul>
+            <li><a href="#board-representation">Board Representation</a></li>
+            <li><a href="#move-generation-evaluation-and-search">Move Generation, Evaluation, and Search</a></li>
+          </ul>
+        </li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+    <span>&copy; 2024 Michael Novotny</span>
+    
+    
+</footer>
+</body>
+</html>
